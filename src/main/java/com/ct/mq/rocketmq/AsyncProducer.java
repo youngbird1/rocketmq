@@ -13,9 +13,9 @@ import org.apache.rocketmq.remoting.common.RemotingHelper;
 public class AsyncProducer {
     public static void main(String[] args) throws Exception {
         //Instantiate with a producer group name.
-        DefaultMQProducer producer = new DefaultMQProducer("please_rename_unique_group_name");
+        DefaultMQProducer producer = new DefaultMQProducer("AsyncProducer");
         // Specify name server addresses.
-        producer.setNamesrvAddr("10.206.148.44:9876");
+        producer.setNamesrvAddr("192.168.1.233:9876");
         //Launch the instance.
         producer.start();
         producer.setRetryTimesWhenSendAsyncFailed(0);
