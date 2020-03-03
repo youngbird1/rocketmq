@@ -16,7 +16,7 @@ public class SyncProducer {
         DefaultMQProducer producer = new
                 DefaultMQProducer("syncProducer");
         // Specify name server addresses.
-        producer.setNamesrvAddr("192.168.1.233:9876");
+        producer.setNamesrvAddr("10.206.148.44:9876");
         producer.setVipChannelEnabled(true);
         producer.setSendMsgTimeout(50000);
         //Launch the instance.

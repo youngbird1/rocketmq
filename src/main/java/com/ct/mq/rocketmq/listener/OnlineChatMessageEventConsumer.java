@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @Date: 2020/3/2 23:44
  */
 @Service
-@RocketMQMessageListener(topic = "TestTopic", consumerGroup = "my-consumer_test-topic-2")
+@RocketMQMessageListener(topic = "TopicTest", consumerGroup = "OnLineChat")
 public class OnlineChatMessageEventConsumer implements RocketMQListener<Message> {
 
     @Override

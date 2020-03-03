@@ -20,7 +20,7 @@ public class Consumer {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("OnLineChat");
 
         // Specify name server addresses.
-        consumer.setNamesrvAddr("192.168.1.233:9876");
+        consumer.setNamesrvAddr("10.206.148.44:9876");
 
         // Subscribe one more more topics to consume.
         consumer.subscribe("TopicTest", "*");

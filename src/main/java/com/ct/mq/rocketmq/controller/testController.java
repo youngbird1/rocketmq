@@ -1,7 +1,6 @@
 package com.ct.mq.rocketmq.controller;
 
-import com.ct.mq.rocketmq.entity.Message;
-import com.ct.mq.rocketmq.service.RocketClient;
+import com.ct.mq.rocketmq.service.RocketMqSendMessageClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,11 +18,11 @@ import javax.annotation.Resource;
 @RequestMapping("test")
 public class testController {
     @Resource
-    RocketClient rocketClient;
+    RocketMqSendMessageClient rocketClient;
 
     @PostMapping
     public String rocketMqSendMsg(@RequestParam String str){
-        rocketClient.sendMsg(str);
+        rocketClient.sendMsg("TopicTest",str);
         return str;
     }
 }

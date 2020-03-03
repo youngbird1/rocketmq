@@ -16,6 +16,8 @@ public class Message {
 
     private String text;
 
+    public Message(){
+    }
     public Message(String to ,String text){
         this.to = to;
         this.text = text;
